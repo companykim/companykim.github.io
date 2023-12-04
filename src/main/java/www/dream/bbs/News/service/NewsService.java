@@ -1,10 +1,9 @@
 package www.dream.bbs.News.service;
 
-import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import www.dream.bbs.News.model.NewsVO;
@@ -15,8 +14,9 @@ public class NewsService {
 	@Autowired
 	private NewsRepository newsRepository;
 
-	public List<NewsVO> getAll() {
-		List<NewsVO> dsgvs = newsRepository.listAll();
+	@Scheduled(cron = "0 0 0 * * *")
+	public List<NewsVO> deleteNews() throws InterruptedException {
+		List<NewsVO> dsgvs = newsRepository.deleteNewsAll();
 		return dsgvs;
 	}
 }

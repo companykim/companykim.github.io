@@ -12,6 +12,6 @@ public class WebClient4Party {
 				.defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE).build();
 
 		String result =  webClient.get().uri("/sign-api/hi").retrieve().bodyToMono(String.class).block();
-//		System.out.println(result);
+		System.out.println(result);
 	}
 }

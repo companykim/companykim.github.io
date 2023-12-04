@@ -36,3 +36,5 @@ select *
    and display_lv > 30
 -- 5 <- 이 파라미터의 숫자가 작아지면 작아질수록 자세하게 보임
    lng, name, use_type
+   
+   

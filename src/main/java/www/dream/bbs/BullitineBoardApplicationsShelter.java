@@ -7,8 +7,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 
+import www.dream.bbs.webclient.WebClient4News;
 import www.dream.bbs.webclient.WebClient4Shelter;
 import www.dream.bbs.webclient.WebClient4Shelter2;
 import www.dream.bbs.webclient.WebClient4Shelter3;
@@ -42,9 +42,9 @@ public class BullitineBoardApplicationsShelter extends SpringBootServletInitiali
 	 //@Scheduled(fixedRate=6000000)
 	public void work3() {
 		webClient4Shelter3.loadShelter();
-
 	}
-
+	
+	
 	public static void main(String[] args) {
 		SpringApplication.run(BullitineBoardApplicationsShelter.class, args);
 	}

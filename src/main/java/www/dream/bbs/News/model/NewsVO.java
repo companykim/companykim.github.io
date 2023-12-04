@@ -19,12 +19,10 @@ public class NewsVO {
 	@Id
 	private String newsdate; // 뉴스 게시 날짜
 	private String newstitle; // 뉴스 헤드라인
-	private int id;
 
 	// shelterVO에 대한 생성자
-	public NewsVO(String newsdate, String newstitle, int id) {
+	public NewsVO(String newsdate, String newstitle) {
 		this.newsdate = newsdate;
 		this.newstitle = newstitle;
-		this.id = id;
 	}
 }

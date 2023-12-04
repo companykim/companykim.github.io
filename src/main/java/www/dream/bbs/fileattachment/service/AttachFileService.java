@@ -32,5 +32,5 @@ public class AttachFileService {
 	public void deleteAttachFiles(MappedTableDef owner) {
 		attachFileRepository.deleteAllByOwnerTypeAndOwnerId(owner.getMappedTableName(), owner.getId());
 	}
-
+	
 }

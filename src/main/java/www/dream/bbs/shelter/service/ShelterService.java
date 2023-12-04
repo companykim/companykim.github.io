@@ -51,6 +51,5 @@ public class ShelterService {
 		useType = "%" + useType + "%";
 		return shelterRepository.findShelter(useType, westBound, eastBound, northBound, southBound, displayLv);
 	}
-	
 }
 
